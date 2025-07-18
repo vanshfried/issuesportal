@@ -23,4 +23,4 @@ mongoose
     console.error("❌ MongoDB connection error:", err.message);
   });
 
-app.use("/api/posts", postRoutes);
+app.use("/posts", postRoutes);

@@ -4,7 +4,7 @@ function Posts() {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/posts")
+    fetch("http://localhost:3000/posts")
       .then(res => res.json())
       .then(data => setPosts(data))
       .catch(err => console.error("Error fetching posts:", err));
