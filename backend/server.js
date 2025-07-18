@@ -3,6 +3,7 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 require("dotenv").config();
 const postRoutes = require("./routes/postRoutes");
+const createRoute = require('./routes/createRoute');
 const PORT = process.env.PORT || 3000;
 const app = express();
 app.use(cors());
@@ -24,3 +25,7 @@ mongoose
   });
 
 app.use("/posts", postRoutes);
+
+app.use('/create', createRoute);
+
+
